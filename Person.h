@@ -17,6 +17,12 @@ public:
 	virtual ~Person();
 	virtual void earnings( ) = 0;
 	virtual void print ( );
+	const string& getAddress() const;
+	void setAddress(const string& address);
+	const Date& getBirthdate() const;
+	void setBirthdate(const Date& birthdate);
+	const string& getName() const;
+	void setName(const string& name);
 
 private:
 	string name;
