@@ -6,7 +6,7 @@
  */
 
 #include "Personnel.h"
-int Personnel::employee_id = 0;
+int Personnel::employee_count = 0;
 Personnel::Personnel() : Person(){
 	string inSoccialAssurance;
 	Date inEmployementDate;
