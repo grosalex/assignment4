@@ -7,12 +7,26 @@
 
 #include "Staff.h"
 
-Staff::Staff() {
-	// TODO Stub du constructeur généré automatiquement
-
+Staff::Staff():Personnel() {
+	double inBiweeklySalary;
+	cout << "What is his biweekly salary? : ";
+	cin >> inBiweeklySalary;
+	biweeklysalary=inBiweeklySalary;
 }
-
+Staff::Staff(string inName, string inAddress, Date inBirthDate,
+		string inSocialAssurance, Date inEmploymentDate,
+		double inBiweeklySalary) : Personnel(inName, inAddress, inBirthDate, inSocialAssurance,inEmploymentDate){
+	biweeklysalary=inBiweeklySalary;
+}
 Staff::~Staff() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
 
+double Staff::getBiweeklysalary() const {
+	return biweeklysalary;
+}
+
+
+void Staff::setBiweeklysalary(double biweeklysalary) {
+	this->biweeklysalary = biweeklysalary;
+}
