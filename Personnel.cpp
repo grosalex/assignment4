@@ -15,6 +15,7 @@ Personnel::Personnel() : Person(){
 
 	cout << "Enter his social assurance number : ";
 	cin >> inSoccialAssurance;
+	social_insurance_number = inSoccialAssurance;
 	employment_date=inEmployementDate;
 }
 

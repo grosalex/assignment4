@@ -13,6 +13,7 @@
 class Physicians: public Personnel {
 public:
 	Physicians();
+	Physicians(string,string,Date,string,Date,int,string,double);
 	virtual ~Physicians();
 private:
 	// Each physician has a unique id as a doctor.
