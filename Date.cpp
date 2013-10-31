@@ -29,6 +29,10 @@ Date::~Date() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
 
+void Date::print() {
+	cout << day << "/" << month << "/" << year;
+}
+
 int Date::getDay() const {
 	return day;
 }

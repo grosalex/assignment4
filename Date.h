@@ -14,6 +14,7 @@ class Date {
 public:
 	Date();
 	Date(int,int,int);
+	void print();
 	virtual ~Date();
 	friend ostream &operator<<(ostream &, const Date &);///TODO wtf?
 	int getDay() const;

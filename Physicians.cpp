@@ -36,3 +36,26 @@ Physicians::~Physicians() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
 
+double Physicians::getMonthlysalary() const {
+	return monthlysalary;
+}
+
+void Physicians::setMonthlysalary(double monthlysalary) {
+	this->monthlysalary = monthlysalary;
+}
+
+int Physicians::getPhysicianId() const {
+	return physician_id;
+}
+
+void Physicians::setPhysicianId(int physicianId) {
+	physician_id = physicianId;
+}
+
+const string& Physicians::getSpecialization() const {
+	return specialization;
+}
+
+void Physicians::setSpecialization(const string& specialization) {
+	this->specialization = specialization;
+}
