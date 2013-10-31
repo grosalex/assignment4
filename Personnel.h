@@ -14,6 +14,7 @@ class Personnel: public Person {
 public:
 	Personnel();
 	Personnel(string inName, string inAddress, Date inBirthDate, string inSocialAssurance, Date inEmploymentDate);
+	virtual void print();
 	virtual ~Personnel();
 private:
 	// employee_count is initialized to zero and incremented by one each time a new

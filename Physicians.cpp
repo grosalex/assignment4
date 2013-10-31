@@ -36,6 +36,13 @@ Physicians::~Physicians() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
 
+void Physicians::print() {
+	Personnel::print();
+	cout << "\nPhysician ID : " << physician_id << endl;
+	cout << "Specialization : " << specialization << endl;
+	cout << "Monthly Salary : $" << monthlysalary;
+}
+
 double Physicians::getMonthlysalary() const {
 	return monthlysalary;
 }

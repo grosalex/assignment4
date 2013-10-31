@@ -27,6 +27,13 @@ Nurses::~Nurses() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
 
+void Nurses::print() {
+	Personnel::print();
+	cout << "\nWork Shift : " << work_shift << endl;
+	cout << "Biweekly Salary : $" << biweeklysalary;
+	///TODO Implémenter earnings function
+}
+
 double Nurses::getBiweeklysalary() const {
 	return biweeklysalary;
 }

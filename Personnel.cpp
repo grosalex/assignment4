@@ -27,6 +27,14 @@ Personnel::Personnel(string inName, string inAddress, Date inBirthDate,
 	employment_date=inEmploymentDate;
 }
 
+void Personnel::print() {
+	Person::print();
+	cout << "\nEmployee ID : " << employee_id << endl;
+	cout << "Social Insurance Number : " << social_insurance_number << endl;
+	cout << "Employment Date : ";
+	employment_date.print();
+}
+
 Personnel::~Personnel() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }

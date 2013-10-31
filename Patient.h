@@ -13,6 +13,7 @@
 class Patient: public Person {
 public:
 	Patient();
+	Patient(string,string,Date,Date,int);
 	virtual ~Patient();
 private:
 	//patient_count is initialized to zero and incremented by one at each patient admission.
@@ -23,7 +24,7 @@ private:
 	int bednumer;
 	Date date_of_admission;
 	// Pointer to the patient’s physician.
-	Physician * my_physician;
+	Physicians * my_physician;
 
 };
 
