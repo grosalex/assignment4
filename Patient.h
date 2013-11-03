@@ -9,6 +9,7 @@
 #define PATIENT_H_
 
 #include "Person.h"
+#include "Physicians.h"
 
 class Patient: public Person {
 public:

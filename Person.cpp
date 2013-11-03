@@ -9,6 +9,7 @@
 
 Person::Person() {
 	string inName, inAddress;
+	cout << "Enter birthdate : " << endl;
 	Date inDate;
 	cout << "Enter the name : ";
 	cin >> inName;
