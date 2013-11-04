@@ -59,3 +59,13 @@ const string& Nurses::getWorkShift() const {
 void Nurses::setWorkShift(const string& workShift) {
 	work_shift = workShift;
 }
+
+double Nurses::earning() {
+	if(work_shift=="night"){
+		return biweeklysalary+night_overtimepay;
+	}
+	else if(work_shift=="evening"){
+		return biweeklysalary+evening_overtimepay;
+	}
+	else return biweeklysalary;
+}
