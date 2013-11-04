@@ -15,6 +15,7 @@ public:
 	Staff();
 	Staff(string inName, string inAddress, Date inBirthDate, string inSocialAssurance, Date inEmploymentDate, double inBiweeklySalary);
 	virtual ~Staff();
+	virtual void print();
 	double getBiweeklysalary() const;
 	void setBiweeklysalary(double biweeklysalary);
 

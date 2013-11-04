@@ -22,6 +22,11 @@ Staff::~Staff() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
 
+void Staff::print() {
+	Personnel::print();
+	cout << "\nBiweekly Salary : $" << biweeklysalary;
+}
+
 double Staff::getBiweeklysalary() const {
 	return biweeklysalary;
 }

@@ -6,9 +6,13 @@
  */
 
 #include "Patient.h"
-
-Patient::Patient() {
-	// TODO Stub du constructeur généré automatiquement
+int Patient::patient_count = 0;
+Patient::Patient(string inName, string inAddress, Date inDate, Date inAdmission, int physician_id)
+	:Person(inName,inAddress,inDate) {
+	patient_count++;
+	patient_number = patient_count;
+	date_of_admission = inAdmission;
+///TODO search physician in personnalarray + bednumber
 
 }
 

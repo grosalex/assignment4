@@ -9,11 +9,21 @@
 #define PHYSICIANS_H_
 
 #include "Personnel.h"
+#include "Person.h"
 
 class Physicians: public Personnel {
 public:
 	Physicians();
+	Physicians(string,string,Date,string,Date,int,string,double);
 	virtual ~Physicians();
+	virtual void print();
+	double getMonthlysalary() const;
+	void setMonthlysalary(double monthlysalary);
+	int getPhysicianId() const;
+	void setPhysicianId(int physicianId);
+	const string& getSpecialization() const;
+	void setSpecialization(const string& specialization);
+
 private:
 	// Each physician has a unique id as a doctor.
 	int physician_id;

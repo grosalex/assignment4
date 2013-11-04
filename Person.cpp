@@ -9,6 +9,7 @@
 
 Person::Person() {
 	string inName, inAddress;
+	cout << "Enter birthdate : " << endl;
 	Date inDate;
 	cout << "Enter the name : ";
 	cin >> inName;
@@ -30,6 +31,10 @@ Person::~Person() {
 }
 
 void Person::print() {
+	cout << "Name : " << name << endl;
+	cout << "Address : " <<address << endl;
+	cout << "Birthdate : ";
+	birthdate.print();
 }
 
 const string& Person::getAddress() const {

@@ -15,6 +15,7 @@ Personnel::Personnel() : Person(){
 
 	cout << "Enter his social assurance number : ";
 	cin >> inSoccialAssurance;
+	social_insurance_number = inSoccialAssurance;
 	employment_date=inEmployementDate;
 }
 
@@ -24,6 +25,14 @@ Personnel::Personnel(string inName, string inAddress, Date inBirthDate,
 	social_insurance_number=inSocialAssurance;
 	employee_id=employee_count;
 	employment_date=inEmploymentDate;
+}
+
+void Personnel::print() {
+	Person::print();
+	cout << "\nEmployee ID : " << employee_id << endl;
+	cout << "Social Insurance Number : " << social_insurance_number << endl;
+	cout << "Employment Date : ";
+	employment_date.print();
 }
 
 Personnel::~Personnel() {

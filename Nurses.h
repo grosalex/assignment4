@@ -15,6 +15,7 @@ public:
 	Nurses();
 	Nurses(string inName, string inAddress, Date inBirthDate, string inSocialAssurance, Date inEmploymentDate, double inBiweeklySalary, string inWorkShift);
 	virtual ~Nurses();
+	virtual void print();
 	double getBiweeklysalary() const;
 	void setBiweeklysalary(double biweeklysalary);
 	static double getEveningOvertimepay() const;
