@@ -12,8 +12,8 @@ Patient::Patient(string inName, string inAddress, Date inDate, Date inAdmission)
 	patient_count++;
 	patient_number = patient_count;
 	date_of_admission = inAdmission;
-	//TODO bednumber to -1 ?
-
+	my_physician=NULL;
+	bednumer=-1;
 }
 
 Patient::~Patient() {
@@ -40,14 +40,14 @@ const Date& Patient::getDateOfAdmission() const {
 }
 
 void Patient::setDateOfAdmission(const Date& dateOfAdmission) {
-	date_of_admission = dateOfAdmission;
+	date_of_admission = dateOfAdmission;)
 }
 
 const Physicians*& Patient::getMyPhysician() const {
 	return my_physician;
 }
 
-void Patient::setMyPhysician(const Physicians*& myPhysician) {
+void Patient::setMyPhysician(Physicians* myPhysician) {
 	my_physician = myPhysician;
 }
 
