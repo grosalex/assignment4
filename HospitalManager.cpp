@@ -68,7 +68,7 @@ bool HospitalManager::patient_discharge(int patient_nb) {
 				cout << "Found patient at index " << i << " in patient array." << endl;
 				for(int j=0; j<archivesize;j++) {
 					if(patientdischargedArray[j] == NULL) {
-						patientdischargedArray[j] = patientArray[i]
+						patientdischargedArray[j] = patientArray[i];
 						ok = true;
 						cout << "Patient transfered in patient discharged array at index " << j << endl;
 					}
