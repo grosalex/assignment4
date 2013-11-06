@@ -41,22 +41,6 @@ void Nurses::setBiweeklysalary(double biweeklysalary) {
 	this->biweeklysalary = biweeklysalary;
 }
 
-static double Nurses::getEveningOvertimepay() const {
-	return evening_overtimepay;
-}
-
-void Nurses::setEveningOvertimepay(static double eveningOvertimepay) {
-	evening_overtimepay = eveningOvertimepay;
-}
-
-static double Nurses::getNightOvertimepay() const {
-	return night_overtimepay;
-}
-
-void Nurses::setNightOvertimepay(static double nightOvertimepay) {
-	night_overtimepay = nightOvertimepay;
-}
-
 const string& Nurses::getWorkShift() const {
 	return work_shift;
 }

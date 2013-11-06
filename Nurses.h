@@ -18,10 +18,6 @@ public:
 	virtual void print();
 	double getBiweeklysalary() const;
 	void setBiweeklysalary(double biweeklysalary);
-	static double getEveningOvertimepay() const;
-	void setEveningOvertimepay(static double eveningOvertimepay);
-	static double getNightOvertimepay() const;
-	void setNightOvertimepay(static double nightOvertimepay);
 	const string& getWorkShift() const;
 	void setWorkShift(const string& workShift);
 
