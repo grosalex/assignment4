@@ -121,5 +121,14 @@ void HospitalManager::print_physicians() {
 }
 
 void HospitalManager::print(int employee_id) {
+	if(dynamic_cast<Staff*>(personnelArray[employee_id])!=0){
+		dynamic_cast<Staff*>(personnelArray[employee_id])->print();
+	}
+	else if (dynamic_cast<Nurses*>(personnelArray[employee_id])!=0) {
+		dynamic_cast<Nurses*>(personnelArray[employee_id])->print();
+	}
+	else if (dynamic_cast<Physicians*>(personnelArray[employee_id])!=0) {
+		dynamic_cast<Physicians*>(personnelArray[employee_id])->print();
+	}
 
 }
