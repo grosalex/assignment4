@@ -39,3 +39,26 @@ Personnel::~Personnel() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
 
+int Personnel::getEmployeeId() const {
+	return employee_id;
+}
+
+void Personnel::setEmployeeId(int employeeId) {
+	employee_id = employeeId;
+}
+
+const Date& Personnel::getEmploymentDate() const {
+	return employment_date;
+}
+
+void Personnel::setEmploymentDate(const Date& employmentDate) {
+	employment_date = employmentDate;
+}
+
+const string& Personnel::getSocialInsuranceNumber() const {
+	return social_insurance_number;
+}
+
+void Personnel::setSocialInsuranceNumber(const string& socialInsuranceNumber) {
+	social_insurance_number = socialInsuranceNumber;
+}

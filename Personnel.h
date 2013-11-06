@@ -16,6 +16,13 @@ public:
 	Personnel(string inName, string inAddress, Date inBirthDate, string inSocialAssurance, Date inEmploymentDate);
 	virtual void print();
 	virtual ~Personnel();
+	int getEmployeeId() const;
+	void setEmployeeId(int employeeId);
+	const Date& getEmploymentDate() const;
+	void setEmploymentDate(const Date& employmentDate);
+	const string& getSocialInsuranceNumber() const;
+	void setSocialInsuranceNumber(const string& socialInsuranceNumber);
+
 private:
 	// employee_count is initialized to zero and incremented by one each time a new
 	// employee is hired.

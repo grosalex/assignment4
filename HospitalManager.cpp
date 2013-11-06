@@ -68,7 +68,7 @@ bool HospitalManager::patient_discharge(int patient_nb) {
 				cout << "Found patient at index " << i << " in patient array." << endl;
 				for(int j=0; j<archivesize;j++) {
 					if(patientdischargedArray[j] == NULL) {
-						patientdischargedArray[j] = patientArray[i];
+						patientdischargedArray[j] = dynamic_cast <Patient*>(patientArray[i]);
 						ok = true;
 						cout << "Patient transfered in patient discharged array at index " << j << endl;
 					}
@@ -99,6 +99,20 @@ bool HospitalManager::add_employee(Personnel* employee) {
 }
 
 bool HospitalManager::remove(int employee_nb) {
+	bool ok=false;
+	for(int i=0; i<maxperson;i++) {
+		if(personnelArray[i]!=NULL) {
+			if(dynamic_cast <Personnel*> (personnelArray[i])->getEmployeeId() == employee_nb) {
+				cout << "Found personnel at index " << i << " in personnel array" << endl;
+				delete(personnelArray[i]);
+				personnelArray[i] = NULL;
+				i = maxperson;
+				ok =true;
+			}
+		}
+	}
+
+	return ok;
 }
 
 void HospitalManager::print_mypatients(int physician_id) {
