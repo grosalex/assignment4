@@ -102,6 +102,12 @@ bool HospitalManager::remove(int employee_nb) {
 }
 
 void HospitalManager::print_mypatients(int physician_id) {
+	if(dynamic_cast <Physicians*> (personnelArray[physician_id])!=0){
+		dynamic_cast <Physicians*> (personnelArray[physician_id])->printPatient();
+	}
+	else{
+		cout << "The specify id isn't a physician id" << endl;
+	}
 }
 
 void HospitalManager::print_physicians() {
@@ -115,4 +121,5 @@ void HospitalManager::print_physicians() {
 }
 
 void HospitalManager::print(int employee_id) {
+
 }

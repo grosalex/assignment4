@@ -24,7 +24,7 @@ public:
 	void setPhysicianId(int physicianId);
 	const string& getSpecialization() const;
 	void setSpecialization(const string& specialization);
-
+	void printPatient();
 private:
 	// Each physician has a unique id as a doctor.
 	int physician_id;
