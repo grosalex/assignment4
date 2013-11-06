@@ -15,6 +15,7 @@ class Physicians: public Personnel {
 public:
 	Physicians();
 	Physicians(string,string,Date,string,Date,int,string,double);
+	void addPatient(Patient*);
 	virtual ~Physicians();
 	virtual void print();
 	double getMonthlysalary() const;

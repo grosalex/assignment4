@@ -8,7 +8,7 @@
 #include "Physicians.h"
 
 Physicians::Physicians(string inName, string inAddress, Date inBirthDate, string inSocialAssurance, Date inEmploymentDate, int inPhysicianid,string inSpe, double inMonthSalary)
-	:Personnel(inName, inAddress, inBirthDate, inSocialAssurance, inEmploymentDate)
+:Personnel(inName, inAddress, inBirthDate, inSocialAssurance, inEmploymentDate)
 {
 	physician_id = inPhysicianid;
 	specialization = inSpe;
@@ -34,6 +34,17 @@ Physicians::Physicians() :Personnel()
 
 Physicians::~Physicians() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
+}
+
+void Physicians::addPatient(Patient* patient) {
+	for(int i=0;i<maxpatients;i++) {
+		if(mypatients[i]==NULL) {
+			mypatients[i]=patient;
+			cout << "Patient added at index " << i << " in mypatient array." << endl;
+			i=maxpatients;
+		}
+	}
+
 }
 
 void Physicians::print() {
