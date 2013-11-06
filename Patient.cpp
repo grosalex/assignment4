@@ -40,7 +40,7 @@ const Date& Patient::getDateOfAdmission() const {
 }
 
 void Patient::setDateOfAdmission(const Date& dateOfAdmission) {
-	date_of_admission = dateOfAdmission;)
+	date_of_admission = dateOfAdmission;
 }
 
 const Physicians*& Patient::getMyPhysician() const {
