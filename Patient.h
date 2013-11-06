@@ -14,7 +14,7 @@
 class Patient: public Person {
 public:
 	Patient();
-	Patient(string,string,Date,Date,int);
+	Patient(string,string,Date,Date);
 	virtual ~Patient();
 private:
 	//patient_count is initialized to zero and incremented by one at each patient admission.
