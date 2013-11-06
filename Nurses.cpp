@@ -30,8 +30,7 @@ Nurses::~Nurses() {
 void Nurses::print() {
 	Personnel::print();
 	cout << "\nWork Shift : " << work_shift << endl;
-	cout << "Biweekly Salary : $" << biweeklysalary;
-	///TODO Implémenter earnings function
+	cout << "Earnings : $" << earning();
 }
 
 double Nurses::getBiweeklysalary() const {

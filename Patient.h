@@ -15,7 +15,17 @@ class Patient: public Person {
 public:
 	Patient();
 	Patient(string,string,Date,Date);
+	virtual void print();
 	virtual ~Patient();
+	int getBednumer() const;
+	void setBednumer(int bednumer);
+	const Date& getDateOfAdmission() const;
+	void setDateOfAdmission(const Date& dateOfAdmission);
+	const Physicians*& getMyPhysician() const;
+	void setMyPhysician(const Physicians*& myPhysician);
+	int getPatientNumber() const;
+	void setPatientNumber(int patientNumber);
+
 private:
 	//patient_count is initialized to zero and incremented by one at each patient admission.
 	static int patient_count;
