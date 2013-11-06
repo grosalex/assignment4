@@ -22,7 +22,7 @@ public:
 	const Date& getDateOfAdmission() const;
 	void setDateOfAdmission(const Date& dateOfAdmission);
 	const Physicians*& getMyPhysician() const;
-	void setMyPhysician(const Physicians*& myPhysician);
+	void setMyPhysician(Physicians* myPhysician);
 	int getPatientNumber() const;
 	void setPatientNumber(int patientNumber);
 
