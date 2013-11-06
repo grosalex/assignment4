@@ -77,3 +77,12 @@ const string& Physicians::getSpecialization() const {
 void Physicians::setSpecialization(const string& specialization) {
 	this->specialization = specialization;
 }
+
+void Physicians::printPatient() {
+	int i=0;
+	for(i=0;i<maxpatients;i++){
+		if(mypatients[i]!=NULL){
+			mypatients[i]->print();
+		}
+	}
+}
