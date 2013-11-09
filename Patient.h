@@ -7,9 +7,8 @@
 
 #ifndef PATIENT_H_
 #define PATIENT_H_
-
 #include "Person.h"
-#include "Physicians.h"
+class Physicians;
 
 class Patient: public Person {
 public:
@@ -21,7 +20,7 @@ public:
 	void setBednumer(int bednumer);
 	const Date& getDateOfAdmission() const;
 	void setDateOfAdmission(const Date& dateOfAdmission);
-	const Physicians*& getMyPhysician() const;
+	const Physicians* getMyPhysician() const;
 	void setMyPhysician(Physicians* myPhysician);
 	int getPatientNumber() const;
 	void setPatientNumber(int patientNumber);

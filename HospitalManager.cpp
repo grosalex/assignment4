@@ -122,6 +122,7 @@ void HospitalManager::print_mypatients(int physician_id) {
 	else{
 		cout << "The specify id isn't a physician id" << endl;
 	}
+	///TODO physican id different de index tableau
 }
 
 void HospitalManager::print_physicians() {
@@ -131,6 +132,8 @@ void HospitalManager::print_physicians() {
 			dynamic_cast<Physicians*>(personnelArray[i])->print();
 		}
 	}
+
+
 
 }
 
@@ -144,5 +147,7 @@ void HospitalManager::print(int employee_id) {
 	else if (dynamic_cast<Physicians*>(personnelArray[employee_id])!=0) {
 		dynamic_cast<Physicians*>(personnelArray[employee_id])->print();
 	}
+
+	///TODO idem que pour print physicians
 
 }

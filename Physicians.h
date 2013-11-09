@@ -9,7 +9,7 @@
 #define PHYSICIANS_H_
 
 #include "Personnel.h"
-#include "Person.h"
+#include "Patient.h"
 
 class Physicians: public Personnel {
 public:

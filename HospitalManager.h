@@ -7,9 +7,14 @@
 
 #ifndef HOSPITALMANAGER_H_
 #define HOSPITALMANAGER_H_
+#include <typeinfo>
 #include "HospitalBed.h"
 #include "Person.h"
+#include "Personnel.h"
 #include "Patient.h"
+#include "Staff.h"
+#include "Nurses.h"
+#include "Physicians.h"
 class HospitalManager {
 public:
 	HospitalManager();

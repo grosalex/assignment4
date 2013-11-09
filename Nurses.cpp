@@ -6,7 +6,8 @@
  */
 
 #include "Nurses.h"
-
+double Nurses::evening_overtimepay = 10;
+double Nurses::night_overtimepay = 20;
 Nurses::Nurses():Personnel() {
 	double inBiweeklySalary;
 	string inWorkShift;
