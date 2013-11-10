@@ -86,6 +86,7 @@ int main(void) {
 		case '4':
 			break;
 		case '5':
+			myManager.print_physicians();
 			break;
 		case '6':
 			break;
