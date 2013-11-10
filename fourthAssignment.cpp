@@ -89,6 +89,10 @@ int main(void) {
 			myManager.print_physicians();
 			break;
 		case '6':
+			myManager.print_physicians();
+			cout << endl << "Which physician's patient do you want to print?(enter his employee id)";
+			cin >> index;
+			myManager.print_mypatients(index);
 			break;
 		case '7':
 			break;
