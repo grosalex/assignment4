@@ -16,6 +16,8 @@ int main(void) {
 	char choice=' ';
 	char createChoice=' ';
 	bool check=false;
+	int i=0;
+	int index;
 	HospitalManager myManager;
 	/*
 1 - add employee
@@ -66,7 +68,18 @@ int main(void) {
 				createChoice=' ';
 			break;
 		case '2':
-
+			for(i=0;i<myManager.getMaxperson();i++){
+				myManager.print(i);
+				cout << endl << "which employee do you want to delete (by his employee id) : ";
+				cin >> index;
+				check=myManager.remove(index);
+				if(check){
+					cout << endl << "employee successfully removed" << endl;
+				}
+				else{
+					cout << endl << "failed to remove employee" << endl;
+				}
+			}
 			break;
 		case '3':
 			break;

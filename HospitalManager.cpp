@@ -151,3 +151,7 @@ void HospitalManager::print(int employee_id) {
 	///TODO idem que pour print physicians
 
 }
+
+static const int HospitalManager::getMaxperson() const {
+	return maxperson;
+}
