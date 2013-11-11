@@ -13,10 +13,16 @@ Physicians::Physicians(string inName, string inAddress, Date inBirthDate, string
 	physician_id = inPhysicianid;
 	specialization = inSpe;
 	monthlysalary = inMonthSalary;
+	for(int i=0; i<maxpatients;i++) {
+		mypatients[i] = NULL;
+	}
 }
 
 Physicians::Physicians() :Personnel()
 {
+	for(int i=0; i<maxpatients;i++) {
+		mypatients[i] = NULL;
+	}
 	int inPhysicianid;
 	string inSpe;
 	double inMonthSalary;
@@ -85,4 +91,8 @@ void Physicians::printPatient() {
 			mypatients[i]->print();
 		}
 	}
+}
+
+int Physicians::getMaxpatients(){
+	return maxpatients;
 }

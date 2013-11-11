@@ -82,8 +82,17 @@ bool HospitalManager::patient_discharge(int patient_nb) {
 						patientdischargedArray[j] = dynamic_cast <Patient*>(patientArray[i]);
 						ok = true;
 						cout << "Patient transfered in patient discharged array at index " << j << endl;
+						j = archivesize;
 					}
 				}
+
+				/*for(int j=0;j<maxperson;j++) {
+					if(dynamic_cast <Physicians*> (personnelArray[i])!=0) {
+						for(int k=0; k<dynamic_cast <Physicians*> (personnelArray[i])->getMaxpatients();k++) {
+							if()
+						}
+					}
+				}*/
 
 				delete(patientArray[i]);
 				patientArray[i] = NULL;
@@ -130,11 +139,13 @@ void HospitalManager::print_mypatients(int physician_id) {
 	int i=0;
 	for(i=0;i<maxperson;i++){
 		if(personnelArray[i]!=NULL){
-			if(dynamic_cast <Physicians*> (personnelArray[i])!=0 && dynamic_cast<Physicians*>(personnelArray[i])->getEmployeeId()==physician_id){
-				dynamic_cast <Physicians*> (personnelArray[i])->printPatient();
-			}
-			else{
-				cout << "The specify id isn't a physician id" << endl;
+			if(dynamic_cast <Physicians*> (personnelArray[i])!=0 ) {
+				if(dynamic_cast<Personnel*>(personnelArray[i])->getEmployeeId()==physician_id){
+					dynamic_cast <Physicians*> (personnelArray[i])->printPatient();
+				}
+				else{
+					cout << "The specify id isn't a physician id" << endl;
+				}
 			}
 		}
 	}
@@ -143,8 +154,10 @@ void HospitalManager::print_mypatients(int physician_id) {
 void HospitalManager::print_physicians() {
 	int i=0;
 	for(i=0;i<maxperson;i++){
-		if(dynamic_cast <Physicians*> (personnelArray[i])!=0){
-			dynamic_cast<Physicians*>(personnelArray[i])->print();
+		if(personnelArray[i]!=NULL){
+			if(dynamic_cast <Physicians*> (personnelArray[i])!=0){
+				dynamic_cast<Physicians*>(personnelArray[i])->print();
+			}
 		}
 	}
 
@@ -176,16 +189,16 @@ void HospitalManager::printallpersonnel() {
 	int i=0;
 	for(i=0;i<maxperson;i++){
 		if(personnelArray[i]!=NULL){
-				if(dynamic_cast<Staff*>(personnelArray[i])!=0){
-					dynamic_cast<Staff*>(personnelArray[i])->print();
-				}
-				else if (dynamic_cast<Nurses*>(personnelArray[i])!=0) {
-					dynamic_cast<Nurses*>(personnelArray[i])->print();
-				}
-				else if (dynamic_cast<Physicians*>(personnelArray[i])!=0) {
-					dynamic_cast<Physicians*>(personnelArray[i])->print();
-				}
+			if(dynamic_cast<Staff*>(personnelArray[i])!=0){
+				dynamic_cast<Staff*>(personnelArray[i])->print();
 			}
+			else if (dynamic_cast<Nurses*>(personnelArray[i])!=0) {
+				dynamic_cast<Nurses*>(personnelArray[i])->print();
+			}
+			else if (dynamic_cast<Physicians*>(personnelArray[i])!=0) {
+				dynamic_cast<Physicians*>(personnelArray[i])->print();
+			}
+		}
 	}
 }
 

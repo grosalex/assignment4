@@ -9,14 +9,15 @@
 int Personnel::employee_count = 0;
 Personnel::Personnel() : Person(){
 	string inSoccialAssurance;
-	Date inEmployementDate;
+	//cout << "Enter employment Date" << endl;
+	//Date inEmployementDate;
 	employee_count++;
 	employee_id=employee_count;
 
 	cout << "Enter his social assurance number : ";
 	cin >> inSoccialAssurance;
 	social_insurance_number = inSoccialAssurance;
-	employment_date=inEmployementDate;
+	//employment_date=inEmployementDate;
 }
 
 Personnel::Personnel(string inName, string inAddress, Date inBirthDate,

@@ -9,13 +9,13 @@
 
 Person::Person() {
 	string inName, inAddress;
-	cout << "Enter birthdate : " << endl;
-	Date inDate;
+	//cout << "Enter birthdate : " << endl;
+	//Date inDate;
 	cout << "Enter the name : ";
 	cin >> inName;
 	cout << "Enter the address : ";
 	cin >> inAddress;
-	birthdate=inDate;
+	//birthdate=inDate;
 	name=inName;
 	address=inAddress;
 }
