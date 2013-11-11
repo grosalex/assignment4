@@ -172,6 +172,23 @@ void HospitalManager::print(int employee_id) {
 
 }
 
+void HospitalManager::printallpersonnel() {
+	int i=0;
+	for(i=0;i<maxperson;i++){
+		if(personnelArray[i]!=NULL){
+				if(dynamic_cast<Staff*>(personnelArray[i])!=0){
+					dynamic_cast<Staff*>(personnelArray[i])->print();
+				}
+				else if (dynamic_cast<Nurses*>(personnelArray[i])!=0) {
+					dynamic_cast<Nurses*>(personnelArray[i])->print();
+				}
+				else if (dynamic_cast<Physicians*>(personnelArray[i])!=0) {
+					dynamic_cast<Physicians*>(personnelArray[i])->print();
+				}
+			}
+	}
+}
+
 int HospitalManager::getMaxperson(){
 	return maxperson;
 }

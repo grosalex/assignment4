@@ -40,6 +40,7 @@ public:
 	// Following function prints all the information about an employee, including his
 	// earnings, parameter is the employee_id.
 	void print(int);
+	void printallpersonnel();
 	int getMaxperson();
 
 private:
