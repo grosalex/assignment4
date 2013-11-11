@@ -16,6 +16,16 @@ Patient::Patient(string inName, string inAddress, Date inDate, Date inAdmission)
 	bednumer=-1;
 }
 
+Patient::Patient()
+	:Person() {
+	patient_count++;
+	patient_number = patient_count;
+	cout << "Enter date of admission" << endl;
+	Date inAdmission;
+	my_physician = NULL;
+	bednumer=-1;
+}
+
 Patient::~Patient() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
