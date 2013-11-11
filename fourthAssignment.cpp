@@ -20,7 +20,7 @@ int main(void) {
 	int patID;
 	int i=0;
 	int index;
-	HospitalManager myManager();
+	HospitalManager * myManager= new HospitalManager();
 	/*
 1 - add employee
 
@@ -52,13 +52,13 @@ int main(void) {
 				cin >> createChoice;
 				switch(createChoice){
 				case'n':
-					check=myManager.add_employee(new Nurses());
+					check=myManager->add_employee(new Nurses());
 					break;
 				case's':
-					check=myManager.add_employee(new Staff());
+					check=myManager->add_employee(new Staff());
 					break;
 				case'p':
-					check=myManager.add_employee(new Physicians());
+					check=myManager->add_employee(new Physicians());
 					break;
 				}
 				if(check){
@@ -70,11 +70,11 @@ int main(void) {
 				createChoice=' ';
 			break;
 		case '2':
-			for(i=0;i<myManager.getMaxperson();i++){
-				myManager.print(i);
+			for(i=0;i<myManager->getMaxperson();i++){
+				myManager->print(i);
 				cout << endl << "which employee do you want to delete (by his employee id) : ";
 				cin >> index;
-				check=myManager.remove(index);
+				check=myManager->remove(index);
 				if(check){
 					cout << endl << "employee successfully removed" << endl;
 				}
@@ -87,10 +87,10 @@ int main(void) {
 		case '3':
 			//Patient* newpatient = new Patient();
 			cout << endl << "Which physician you want ?" << endl;
-			myManager.print_physicians();
+			myManager->print_physicians();
 			cin >> physID;
 			cout << endl << "Enter patient informations : " << endl;
-			check = myManager.patient_admission(new Patient(),physID);
+			check = myManager->patient_admission(new Patient(),physID);
 			if(check) cout << "Patient successfully admitted." << endl;
 			else cout << "Error, patient not admitted." << endl;
 			break;
@@ -99,19 +99,19 @@ int main(void) {
 
 			cout << "Enter ID of discharged patient :";
 			cin >> patID;
-			check = myManager.patient_discharge(patID);
+			check = myManager->patient_discharge(patID);
 			if(check) cout << "Patient successfully discharged." << endl;
 			else cout << "Patient wasn't discharged." << endl;
 
 			break;
 		case '5':
-			myManager.print_physicians();
+			myManager->print_physicians();
 			break;
 		case '6':
-			myManager.print_physicians();
+			myManager->print_physicians();
 			cout << endl << "Which physician's patient do you want to print?(enter his employee id)";
 			cin >> index;
-			myManager.print_mypatients(index);
+			myManager->print_mypatients(index);
 			break;
 		case '7':
 			break;
