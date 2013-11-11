@@ -40,7 +40,7 @@ public:
 	// Following function prints all the information about an employee, including his
 	// earnings, parameter is the employee_id.
 	void print(int);
-	static const int getMaxperson() const;
+	int getMaxperson();
 
 private:
 	static const int maxbed = 400;

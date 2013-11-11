@@ -20,7 +20,7 @@ int main(void) {
 	int patID;
 	int i=0;
 	int index;
-	HospitalManager myManager;
+	HospitalManager myManager();
 	/*
 1 - add employee
 
@@ -85,12 +85,12 @@ int main(void) {
 			break;
 
 		case '3':
-			cout << endl << "Enter patient informations : " << endl;
-			Patient* newpatient = new Patient;
+			//Patient* newpatient = new Patient();
 			cout << endl << "Which physician you want ?" << endl;
 			myManager.print_physicians();
 			cin >> physID;
-			check = myManager.patient_admission(newpatient,physID);
+			cout << endl << "Enter patient informations : " << endl;
+			check = myManager.patient_admission(new Patient(),physID);
 			if(check) cout << "Patient successfully admitted." << endl;
 			else cout << "Error, patient not admitted." << endl;
 			break;

@@ -79,7 +79,11 @@ fourthAssignment.o: fourthAssignment.cpp \
  /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_ios.tcc \
  /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/ostream.tcc \
  /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/istream \
- /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/istream.tcc
+ /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/istream.tcc \
+ HospitalManager.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/typeinfo \
+ HospitalBed.h Person.h Date.h Personnel.h Patient.h Staff.h Nurses.h \
+ Physicians.h
 
 /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/iostream:
 
@@ -264,3 +268,23 @@ fourthAssignment.o: fourthAssignment.cpp \
 /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/istream:
 
 /usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/bits/istream.tcc:
+
+HospitalManager.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../include/c++/4.7.2/typeinfo:
+
+HospitalBed.h:
+
+Person.h:
+
+Date.h:
+
+Personnel.h:
+
+Patient.h:
+
+Staff.h:
+
+Nurses.h:
+
+Physicians.h:
