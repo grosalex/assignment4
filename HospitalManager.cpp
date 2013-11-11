@@ -116,13 +116,17 @@ bool HospitalManager::remove(int employee_nb) {
 }
 
 void HospitalManager::print_mypatients(int physician_id) {
-	if(dynamic_cast <Physicians*> (personnelArray[physician_id])!=0){
-		dynamic_cast <Physicians*> (personnelArray[physician_id])->printPatient();
+	int i=0;
+	for(i=0;i<maxperson;i++){
+		if(personnelArray[i]!=NULL){
+			if(dynamic_cast <Physicians*> (personnelArray[i])!=0 && dynamic_cast<Physicians*>(personnelArray[i])->getEmployeeId()==physician_id){
+				dynamic_cast <Physicians*> (personnelArray[i])->printPatient();
+			}
+			else{
+				cout << "The specify id isn't a physician id" << endl;
+			}
+		}
 	}
-	else{
-		cout << "The specify id isn't a physician id" << endl;
-	}
-	///TODO physican id different de index tableau
 }
 
 void HospitalManager::print_physicians() {
@@ -138,17 +142,22 @@ void HospitalManager::print_physicians() {
 }
 
 void HospitalManager::print(int employee_id) {
-	if(dynamic_cast<Staff*>(personnelArray[employee_id])!=0){
-		dynamic_cast<Staff*>(personnelArray[employee_id])->print();
+	int i=0;
+	for(i=0;i<maxperson;i++){
+		if(personnelArray[i]!=NULL){
+			if(dynamic_cast <Personnel*> (personnelArray[i])->getEmployeeId()==employee_id){
+				if(dynamic_cast<Staff*>(personnelArray[i])!=0){
+					dynamic_cast<Staff*>(personnelArray[i])->print();
+				}
+				else if (dynamic_cast<Nurses*>(personnelArray[i])!=0) {
+					dynamic_cast<Nurses*>(personnelArray[i])->print();
+				}
+				else if (dynamic_cast<Physicians*>(personnelArray[i])!=0) {
+					dynamic_cast<Physicians*>(personnelArray[i])->print();
+				}
+			}
+		}
 	}
-	else if (dynamic_cast<Nurses*>(personnelArray[employee_id])!=0) {
-		dynamic_cast<Nurses*>(personnelArray[employee_id])->print();
-	}
-	else if (dynamic_cast<Physicians*>(personnelArray[employee_id])!=0) {
-		dynamic_cast<Physicians*>(personnelArray[employee_id])->print();
-	}
-
-	///TODO idem que pour print physicians
 
 }
 
