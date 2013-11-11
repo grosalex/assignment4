@@ -15,7 +15,7 @@ public:
 	Person(string inName, string inAddress, Date inDate);
 	Person();
 	virtual ~Person();
-	virtual void earnings( ) = 0;
+	virtual double earnings( ) = 0;
 	virtual void print ( );
 	const string& getAddress() const;
 	void setAddress(const string& address);

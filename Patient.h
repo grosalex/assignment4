@@ -15,6 +15,7 @@ public:
 	Patient();
 	Patient(string,string,Date,Date);
 	virtual void print();
+	virtual double earnings( );
 	virtual ~Patient();
 	int getBednumer() const;
 	void setBednumer(int bednumer);

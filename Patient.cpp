@@ -20,6 +20,11 @@ Patient::~Patient() {
 	// TODO !CodeTemplates.destructorstub.tododesc!
 }
 
+double Patient::earnings() {
+	return NULL;
+
+}
+
 void Patient::print() {
 	Person::print();
 	cout << "\nPatient number : " << patient_number << endl;

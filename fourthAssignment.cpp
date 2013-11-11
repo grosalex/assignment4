@@ -16,6 +16,8 @@ int main(void) {
 	char choice=' ';
 	char createChoice=' ';
 	bool check=false;
+	int physID;
+	int patID;
 	int i=0;
 	int index;
 	HospitalManager myManager;
@@ -63,7 +65,7 @@ int main(void) {
 					cout << "Employee correctly added"<< endl;
 				}
 				else{
-					cout << "Couldn't added the employee" << endl;
+					cout << "Couldn't add the employee" << endl;
 				}
 				createChoice=' ';
 			break;
@@ -81,9 +83,26 @@ int main(void) {
 				}
 			}
 			break;
+
 		case '3':
+			cout << endl << "Enter patient informations : " << endl;
+			Patient* newpatient = new Patient;
+			cout << endl << "Which physician you want ?" << endl;
+			myManager.print_physicians();
+			cin >> physID;
+			check = myManager.patient_admission(newpatient,physID);
+			if(check) cout << "Patient successfully admitted." << endl;
+			else cout << "Error, patient not admitted." << endl;
 			break;
+
 		case '4':
+
+			cout << "Enter ID of discharged patient :";
+			cin >> patID;
+			check = myManager.patient_discharge(patID);
+			if(check) cout << "Patient successfully discharged." << endl;
+			else cout << "Patient wasn't discharged." << endl;
+
 			break;
 		case '5':
 			myManager.print_physicians();

@@ -31,16 +31,27 @@ bool HospitalManager::patient_admission(Patient* patient, int physician_id) {
 	int i=0,j=0,k=0,l=0;
 	for(i=0;i<maxbed;i++){
 		if(bedArray[i].isAvailability()){
-			thereIsFreeBed=true;
-			bedArray[i].setAvailability(false);
+			//thereIsFreeBed=true;
+			//bedArray[i].setAvailability(false);
 			for(j=0;j<maxbed;j++){
 				if(patientArray[j]==NULL){
-					patientArray[j]=patient;
-					dynamic_cast <Patient*> (patientArray[j])->setBednumer(i);
-					bedArray[i].setPatientNumber(dynamic_cast<Patient*> (patientArray[j])->getPatientNumber());
+					//patientArray[j]=patient;
+					//dynamic_cast <Patient*> (patientArray[j])->setBednumer(i);
+					//bedArray[i].setPatientNumber(dynamic_cast<Patient*> (patientArray[j])->getPatientNumber());
 					for(k=0;k<maxperson;k++){
 						if(dynamic_cast <Physicians*>(personnelArray[k])!=0){
 							if(dynamic_cast <Physicians*>(personnelArray[k])->getPhysicianId()==physician_id){
+
+								//Setting patient's bed
+								thereIsFreeBed=true;
+								bedArray[i].setAvailability(false);
+
+								//Adding patient in array
+								patientArray[j]=patient;
+								dynamic_cast <Patient*> (patientArray[j])->setBednumer(i);
+								bedArray[i].setPatientNumber(dynamic_cast<Patient*> (patientArray[j])->getPatientNumber());
+
+								//Setting physician's patient and patient's physician
 								dynamic_cast <Patient*> (patientArray[j])->setMyPhysician(dynamic_cast <Physicians*>(personnelArray[k]));
 								dynamic_cast <Physicians*>(personnelArray[k])->addPatient(dynamic_cast <Patient*> (patientArray[j]));
 
