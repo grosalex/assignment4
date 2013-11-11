@@ -31,7 +31,7 @@ Nurses::~Nurses() {
 void Nurses::print() {
 	Personnel::print();
 	cout << "\nWork Shift : " << work_shift << endl;
-	cout << "Earnings : $" << earning();
+	cout << "Earnings : $" << earnings();
 }
 
 double Nurses::getBiweeklysalary() const {
@@ -51,7 +51,7 @@ void Nurses::setWorkShift(const string& workShift) {
 	work_shift = workShift;
 }
 
-double Nurses::earning() {
+double Nurses::earnings() {
 	if(work_shift=="night"){
 		return biweeklysalary+night_overtimepay;
 	}

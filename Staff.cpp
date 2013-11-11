@@ -27,7 +27,7 @@ void Staff::print() {
 	cout << "\nBiweekly Salary : $" << biweeklysalary;
 }
 
-double Staff::getBiweeklysalary() const {
+double Staff::earnings() {
 	return biweeklysalary;
 }
 

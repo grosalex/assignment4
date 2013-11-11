@@ -21,7 +21,7 @@ public:
 	const string& getWorkShift() const;
 	void setWorkShift(const string& workShift);
 
-	double earning();
+	virtual double earnings();
 
 private:
 	double biweeklysalary;

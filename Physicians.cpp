@@ -54,7 +54,7 @@ void Physicians::print() {
 	cout << "Monthly Salary : $" << monthlysalary;
 }
 
-double Physicians::getMonthlysalary() const {
+double Physicians::earnings() {
 	return monthlysalary;
 }
 

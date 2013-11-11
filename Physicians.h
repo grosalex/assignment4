@@ -18,7 +18,7 @@ public:
 	void addPatient(Patient*);
 	virtual ~Physicians();
 	virtual void print();
-	double getMonthlysalary() const;
+	virtual double earnings();
 	void setMonthlysalary(double monthlysalary);
 	int getPhysicianId() const;
 	void setPhysicianId(int physicianId);
